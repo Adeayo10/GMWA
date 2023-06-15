@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form name="signin" action="/auth/signIn" method="post">
+            username: <input name="username" placeholder="username" id="username" style="color: black;" /><br />
+            password: <input type="password" name="password" placeholder="password" id="password" required
+                style="color: black;" /><br />
+            <input type="submit" value="SIGN IN" class="btn btn-primary btn-lg"></input>
+            <input type="checkbox" onclick="showPassword()">Show Password</input>
+        </form>
+    </div>
+    <script>
+        function showPassword() {
+             const passwordId = document.getElementById("password");
+             if (passwordId.type === "password") {
+                passwordId.type = "text";
+            } else {
+                passwordId.type = "password";
+            }
+        } 
+    </script>
+</body>
+
+</html>
